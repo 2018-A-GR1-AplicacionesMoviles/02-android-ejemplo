@@ -19,6 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActividadDos" />
+        <activity
+            android:name=".ActividadTres"
+            android:label="@string/title_activity_actividad_tres"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

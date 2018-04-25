@@ -17,4 +17,11 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <style name="estilo_boton">
+        <item name="android:background">#817c7c</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
+
 </resources>
