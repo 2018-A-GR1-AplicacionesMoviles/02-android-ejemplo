@@ -11,14 +11,14 @@
 
     <TextView
         android:id="@+id/backg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="91dp"
+        android:layout_height="23dp"
         android:layout_marginLeft="@dimen/margen_texto"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="40dp"
         android:background="@color/verde"
         android:fontFamily="@font/gugi_regular"
         android:text="@string/saludo"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,8 +41,36 @@
         android:id="@+id/imageView"
         android:layout_width="101dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/epn"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="286dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/backg"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toStartOf="@+id/backg"
+        app:layout_constraintTop_toBottomOf="@+id/backg"
+        app:srcCompat="@drawable/epn" />
+
+    <Button
+        android:id="@+id/spinner_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Spinner"
+        app:layout_constraintEnd_toEndOf="@+id/button_navegar_activida_dos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_navegar_activida_dos"
+        app:layout_constraintTop_toBottomOf="@+id/button_navegar_activida_dos" />
+
+    <Button
+        android:id="@+id/botton_crear_usuario"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Crear"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_button"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="@+id/spinner_button"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_button" />
 
 </android.support.constraint.ConstraintLayout>
