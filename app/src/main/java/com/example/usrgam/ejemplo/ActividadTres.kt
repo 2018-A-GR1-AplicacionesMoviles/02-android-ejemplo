@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 
 import kotlinx.android.synthetic.main.activity_actividad_tres.*
 import kotlinx.android.synthetic.main.content_actividad_tres.*
@@ -14,6 +15,13 @@ class ActividadTres : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actividad_tres)
         setSupportActionBar(toolbar)
+
+
+        val valorACompartir = intent.getStringExtra(Intent.EXTRA_TEXT)
+
+        // Log.i("etiqueta", "valorACompartir: ${valorACompartir}")
+
+        text_view_compartir.text = valorACompartir
 
         button_tres.setOnClickListener { view ->
             irAActividadTres()
