@@ -18,7 +18,9 @@ class CicloVidaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ciclo_vida)
         Log.i("ciclo-vida", "Ejecuto: On Create")
 
-        usuario = intent.getStringExtra("usuario-intent") as UsuarioParcelable?
+
+        usuario = intent.getParcelableExtra("usuario-intent")
+        
 
         val contadorGuardado: Int? = savedInstanceState?.get("contador") as Int?
 
