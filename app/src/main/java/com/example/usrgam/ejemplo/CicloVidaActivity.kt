@@ -15,14 +15,15 @@ class CicloVidaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ciclo_vida)
         Log.i("ciclo-vida", "Ejecuto: On Create")
 
-        val contadorGuardado: Int? = savedInstanceState?.get("contador") as Int
+        val contadorGuardado: Int? = savedInstanceState?.get("contador") as Int?
 
         Log.i("ciclo-vida","El contador es: $contadorGuardado")
 
-        if(contadorGuardado !=null){
+        if(contadorGuardado ==null){
             text_view_contador.text = contador.toString()
         } else {
             text_view_contador.text = contadorGuardado.toString()
+            contador = contadorGuardado
         }
 
 
