@@ -7,16 +7,20 @@ import java.util.Date
 /**
  * Created by USRGAM on 09/05/2018.
  */
-class UsuarioParcelable(val nombre: String,
-                        val edad: Int,
-                        val fechaNacimiento: Date?,
-                        val casado: Boolean) : Parcelable {
+class UsuarioParcelable(var nombre: String,
+                        var edad: Int,
+                        var fechaNacimiento: Date?,
+                        var casado: Boolean) : Parcelable {
 
     constructor(parcel: Parcel) : this(
             parcel.readString(),
             parcel.readInt(),
             parcel.leerDate(),
             parcel.readByte() != 0.toByte()) {
+    }
+
+    fun aumentarAnio(numero: Int) {
+        edad += numero
     }
 
     override fun writeToParcel(destino: Parcel?, p1: Int) {

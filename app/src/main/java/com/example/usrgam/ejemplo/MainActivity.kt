@@ -16,6 +16,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import android.widget.Toast
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -113,6 +114,8 @@ class MainActivity : AppCompatActivity() {
 
     fun irAActividadCicloVida() {
         val intent = Intent(this, CicloVidaActivity::class.java)
+        val nuevoUsuario = UsuarioParcelable("Adrian", 5, Date(), true)
+        intent.putExtra("usuario-intent", nuevoUsuario)
         startActivity(intent)
     }
 
