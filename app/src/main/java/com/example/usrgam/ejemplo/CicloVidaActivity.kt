@@ -15,7 +15,16 @@ class CicloVidaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ciclo_vida)
         Log.i("ciclo-vida", "Ejecuto: On Create")
 
-        text_view_contador.text = contador.toString()
+        val contadorGuardado: Int? = savedInstanceState?.get("contador") as Int
+
+        Log.i("ciclo-vida","El contador es: $contadorGuardado")
+
+        if(contadorGuardado !=null){
+            text_view_contador.text = contador.toString()
+        } else {
+            text_view_contador.text = contadorGuardado.toString()
+        }
+
 
         boton_contador
                 .setOnClickListener { view ->
@@ -62,6 +71,9 @@ class CicloVidaActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
+
+        outState?.putInt("contador",contador)
+
         Log.i("ciclo-vida", "Ejecuto: On SaveInstanceState")
     }
 }
