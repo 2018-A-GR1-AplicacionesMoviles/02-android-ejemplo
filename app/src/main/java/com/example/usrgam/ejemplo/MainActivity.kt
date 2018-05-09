@@ -72,6 +72,9 @@ class MainActivity : AppCompatActivity() {
                     irAActividadCrearUsuario()
                 }
 
+        boton_ciclo_vida.setOnClickListener { view: View ->
+            irAActividadCicloVida()
+        }
 
     }
 
@@ -105,6 +108,11 @@ class MainActivity : AppCompatActivity() {
 
     fun irAActividadCrearUsuario() {
         val intent = Intent(this, CrearUsuarioActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadCicloVida() {
+        val intent = Intent(this, CicloVidaActivity::class.java)
         startActivity(intent)
     }
 

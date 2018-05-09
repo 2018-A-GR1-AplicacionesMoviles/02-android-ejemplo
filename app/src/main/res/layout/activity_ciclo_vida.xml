@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context="com.example.usrgam.ejemplo.CicloVidaActivity">
 
+    <Button
+        android:id="@+id/boton_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Contador"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/boton_contador"
+        app:layout_constraintEnd_toEndOf="@+id/boton_contador"
+        app:layout_constraintStart_toStartOf="@+id/boton_contador" />
 </android.support.constraint.ConstraintLayout>

@@ -73,4 +73,16 @@
         app:layout_constraintStart_toStartOf="@+id/spinner_button"
         app:layout_constraintTop_toBottomOf="@+id/spinner_button" />
 
+    <Button
+        android:id="@+id/boton_ciclo_vida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Ciclo Vida"
+        app:layout_constraintBottom_toTopOf="@+id/button_navegar_activida_dos"
+        app:layout_constraintEnd_toEndOf="@+id/button_navegar_activida_dos"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/button_navegar_activida_dos" />
+
 </android.support.constraint.ConstraintLayout>
