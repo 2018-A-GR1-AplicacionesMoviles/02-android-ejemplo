@@ -8,5 +8,16 @@ class SQliteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sqlite)
+
+        val dbHandler = DbHandlerAplicacion(this)
+        dbHandler.insertarUsuario("Adrian")
+        dbHandler.leerDatos()
+
+
+
+
+
+        
+
     }
 }
