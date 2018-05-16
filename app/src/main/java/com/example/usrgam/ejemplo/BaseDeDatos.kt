@@ -1,13 +1,15 @@
 package com.example.usrgam.ejemplo
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 /**
  * Created by USRGAM on 16/05/2018.
  */
-class BaseDeDatos{
+class BaseDeDatos {
     companion object {
         val BDD_NOMBRE = "aplicacion"
         val BDD_TABLA_USUARIO_NOMBRE = "usuario"
@@ -26,19 +28,22 @@ class DbHandlerAplicacion(context: Context) : SQLiteOpenHelper(context, BaseDeDa
     }
 
 
-    
-
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     fun insertarUsuario(nombre: String) {
         val dbWriteable = writableDatabase
-        var cv = ContentValues()
-        cv.put(DatabaseSQLite.COL_NOMBRE, nombre)
-        val resultado = dbWriteable.insert(DatabaseSQLite.USR_TABLE_NAME, null, cv)
-        Log.i("database", "Si es -1 hubo error, sino exito: Respuesta:$resultado")
+        val cv = ContentValues()
+
+        cv.put(BaseDeDatos.BDD_TABLA_USUARIO_CAMPO_NOMBRE, nombre)
+
+        val resultado = dbWriteable.insert(BaseDeDatos.BDD_TABLA_USUARIO_NOMBRE, null, cv)
+
+        Log.i("database", "Si es -1 hubo error, sino exito: Respuesta: $resultado")
+
         dbWriteable.close()
+
     }
 
     fun leerDatos() {
