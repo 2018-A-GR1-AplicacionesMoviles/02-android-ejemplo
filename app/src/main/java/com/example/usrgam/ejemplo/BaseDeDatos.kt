@@ -48,7 +48,9 @@ class DbHandlerAplicacion(context: Context) : SQLiteOpenHelper(context, BaseDeDa
 
     fun leerDatos() {
         val dbReadable = readableDatabase
-        val query = "SELECT * FROM ${DatabaseSQLite.USR_TABLE_NAME}"
+
+        val query = "SELECT * FROM ${BaseDeDatos.BDD_TABLA_USUARIO_NOMBRE}"
+
         val resultado = dbReadable.rawQuery(query, null)
         if (resultado.moveToFirst()) {
             do {
