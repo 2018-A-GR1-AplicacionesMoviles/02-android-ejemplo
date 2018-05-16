@@ -41,7 +41,9 @@
         </activity>
         <activity android:name=".SpinnerActivity" />
         <activity android:name=".CrearUsuarioActivity" />
-        <activity android:name=".CicloVidaActivity"></activity>
+        <activity android:name=".CicloVidaActivity" />
+        <activity android:name=".SQliteActivity" />
+        <activity android:name=".FragmentosActivity"></activity>
     </application>
 
 </manifest>

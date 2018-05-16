@@ -77,6 +77,14 @@ class MainActivity : AppCompatActivity() {
             irAActividadCicloVida()
         }
 
+        boton_fragmento.setOnClickListener { view: View ->
+            irAActividadFragmentos()
+        }
+
+        boton_sqlite.setOnClickListener { view: View ->
+            irAActividadSQlite()
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -116,6 +124,16 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CicloVidaActivity::class.java)
         val nuevoUsuario = UsuarioParcelable("Adrian", 5, Date(), true)
         intent.putExtra("usuario-intent", nuevoUsuario)
+        startActivity(intent)
+    }
+
+    fun irAActividadSQlite() {
+        val intent = Intent(this, SQliteActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadFragmentos() {
+        val intent = Intent(this, FragmentosActivity::class.java)
         startActivity(intent)
     }
 
