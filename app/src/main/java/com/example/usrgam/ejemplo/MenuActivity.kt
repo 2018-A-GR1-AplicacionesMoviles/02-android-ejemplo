@@ -134,7 +134,7 @@ class MenuActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
         val info = item.menuInfo as AdapterContextMenuInfo
         when (item.getItemId()) {
             R.id.item_menu_guardar -> {
-                Log.i("menu", "Guardar")
+                Log.i("menu", "Guardar ${info.id} ${info.position}")
                 return true
             }
             R.id.item_menu_editar -> {
