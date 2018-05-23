@@ -100,3 +100,17 @@ override fun onCreateContextMenu(menu: ContextMenu, v: View,
         inflater.inflate(R.menu.contextual_menu, menu)
     }
 ```
+
+## Pop up menu
+
+Se debe de ejecutar en una accion de un boton por ejemplo:
+
+```kotlin
+fab.setOnClickListener { view ->
+
+            val popup = PopupMenu(this, view)
+            val inflater = popup.menuInflater
+            inflater.inflate(R.menu.contextual_menu, popup.menu)
+            popup.show()
+        }
+```
