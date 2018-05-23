@@ -43,7 +43,15 @@
         <activity android:name=".CrearUsuarioActivity" />
         <activity android:name=".CicloVidaActivity" />
         <activity android:name=".SQliteActivity" />
-        <activity android:name=".FragmentosActivity"></activity>
+        <activity android:name=".FragmentosActivity" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DialogoActivity"
+            android:label="@string/title_activity_dialogo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

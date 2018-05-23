@@ -85,6 +85,15 @@ class MainActivity : AppCompatActivity() {
             irAActividadSQlite()
         }
 
+        boton_menu.setOnClickListener { view: View ->
+            irAActividadMenu()
+        }
+
+        boton_dialogo.setOnClickListener { view: View ->
+            irAActividadDialogo()
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -134,6 +143,16 @@ class MainActivity : AppCompatActivity() {
 
     fun irAActividadFragmentos() {
         val intent = Intent(this, FragmentosActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadMenu() {
+        val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadDialogo() {
+        val intent = Intent(this, DialogoActivity::class.java)
         startActivity(intent)
     }
 

@@ -11,5 +11,6 @@ class FragmentoUno : Fragment() {
                               savedInstanceState: Bundle?): View? {
         return inflater!!.inflate(R.layout.fragment_fragmento_uno, container, false)
 
+
     }
 }
