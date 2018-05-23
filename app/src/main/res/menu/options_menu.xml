@@ -9,9 +9,49 @@
         app:showAsAction="always" />
 
     <item
+        android:id="@+id/item_menu_pokemon"
+        android:icon="@drawable/icono"
+        android:title="Pokemon"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/item_menu_ayuda"
         android:icon="@drawable/icono"
-        android:title="Ayuda" />
+        android:title="Ayuda"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_menu_settings"
+        android:icon="@drawable/icono"
+        android:title="Settings"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_menu_pedido"
+        android:icon="@drawable/icono"
+        android:title="Pedido"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_menu_comida"
+        android:icon="@drawable/icono"
+        android:title="Comida"
+        app:showAsAction="never"/>
+
+
+    <item android:id="@+id/item_menu_submenu"
+        android:title="Sub menu titulo" >
+        <!-- "file" submenu -->
+        <menu>
+
+            <item android:id="@+id/item_menu_nuevo1"
+                android:title="Nuevo 1" />
+
+
+            <item android:id="@+id/item_menu_nuevo2"
+                android:title="Nuevo 2" />
+        </menu>
+    </item>
 
 
 </menu>
