@@ -18,7 +18,30 @@ class DialogoActivity : AppCompatActivity() {
 
         fab.setOnClickListener { view ->
             val builder = AlertDialog.Builder(this)
-            builder.setMessage("¿Está seguro?")
+//            builder.setMessage("¿Está seguro?")
+            val listaItems = resources.getStringArray(R.array.string_array_opciones_dialogo)
+            val seleccionUsuario = booleanArrayOf(
+                    true,
+                    false,
+                    false,
+                    false
+            )
+            builder.setTitle("Escoja un numero")
+            builder.setMultiChoiceItems(
+                    listaItems,
+                    seleccionUsuario,
+                    DialogInterface.OnMultiChoiceClickListener {
+                        dialogInterface: DialogInterface,
+                        i: Int,
+                        b ->
+
+                        Log.i("dialogo", "Escogio algo $i")
+                    })
+//            builder.setSingleChoiceItems(listaItems, -1,
+//                    DialogInterface.OnClickListener { dialog, which ->
+//                        Log.i("dialogo", "Escogio algo $which")
+//                    })
+
             builder.setPositiveButton(
                     "Aceptar",
                     DialogInterface.OnClickListener { dialog, which ->
