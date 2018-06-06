@@ -14,9 +14,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         val file = File("/sdcard/Android/data/com.example.adrianeguez.camara/files/Pictures/JPEG_20180606_124732_4785118857597101135.jpg")
+        val fileDest = File("/sdcard/DCIM/Camera/JPEG_20180606_124732_4785118857597101135.jpg")
+        val uri = Uri.fromFile(file)
+
+
+        val scanFileIntent = Intent(
+                Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri)
+        sendBroadcast(scanFileIntent)
+
 
         val myBitmap = BitmapFactory.decodeFile(file.getAbsolutePath())
 
+        val input = FileInputStream(file)
+        val output = FileOutputStream(fileDest)
+        val buf = ByteArray(1024)
+        var len = input.read(buf)
+        while (len > 0) {
+            output.write(buf, 0, len)
+        }
         mImageView.setImageBitmap(myBitmap)
 
 
@@ -152,4 +167,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
 ```
