@@ -37,6 +37,15 @@ class HttpFuel : AppCompatActivity() {
                                 Log.i("http-ejemplo", "Edad: ${entrenador.edad}")
                                 Log.i("http-ejemplo", "Creado: ${entrenador.createdAtDate}")
                                 Log.i("http-ejemplo", "Actualizado: ${entrenador.updatedAtDate}")
+
+                                entrenador.pokemons.forEach { pokemon: Pokemon ->
+                                    Log.i("http-ejemplo", "Nombre ${pokemon.nombre}")
+                                    Log.i("http-ejemplo", "Tipo ${pokemon.tipo}")
+                                    Log.i("http-ejemplo", "Numero ${pokemon.numero}")
+                                }
+
+                                
+
                             } else {
                                 Log.i("http-ejemplo", "Entrenador nulo")
                             }
