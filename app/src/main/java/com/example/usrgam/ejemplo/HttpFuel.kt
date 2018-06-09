@@ -54,9 +54,21 @@ class Entrenador(var nombre: String,
                  var medallas: String,
                  var createdAt: Long,
                  var updatedAt: Long,
-                 var id: Int) {
+                 var id: Int,
+                 var pokemons: ArrayList<Pokemon> = ArrayList()) {
     var createdAtDate = Date(updatedAt)
     var updatedAtDate = Date(createdAt)
 
 
+}
+
+class Pokemon(var nombre: String,
+              var numero: Int,
+              var tipo: String,
+              var createdAt: Long,
+              var updatedAt: Long,
+              var id: Int,
+              var entrenadorId: Int) {
+    var createdAtDate = Date(updatedAt)
+    var updatedAtDate = Date(createdAt)
 }
