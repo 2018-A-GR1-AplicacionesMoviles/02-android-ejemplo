@@ -44,7 +44,7 @@ class HttpFuel : AppCompatActivity() {
                                     Log.i("http-ejemplo", "Numero ${pokemon.numero}")
                                 }
 
-                                
+
 
                             } else {
                                 Log.i("http-ejemplo", "Entrenador nulo")
