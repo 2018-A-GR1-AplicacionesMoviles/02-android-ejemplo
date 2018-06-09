@@ -93,6 +93,9 @@ class MainActivity : AppCompatActivity() {
             irAActividadDialogo()
         }
 
+        boton_http.setOnClickListener { view: View ->
+            irAActividadHTTP()
+        }
 
     }
 
@@ -126,6 +129,12 @@ class MainActivity : AppCompatActivity() {
 
     fun irAActividadCrearUsuario() {
         val intent = Intent(this, CrearUsuarioActivity::class.java)
+        startActivity(intent)
+    }
+
+
+    fun irAActividadHTTP() {
+        val intent = Intent(this, HttpFuel::class.java)
         startActivity(intent)
     }
 

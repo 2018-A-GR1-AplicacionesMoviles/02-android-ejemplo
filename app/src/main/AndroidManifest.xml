@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature
         android:name="android.hardware.sensor.compass"
@@ -51,7 +53,8 @@
         <activity
             android:name=".DialogoActivity"
             android:label="@string/title_activity_dialogo"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HttpFuel"></activity>
     </application>
 
 </manifest>

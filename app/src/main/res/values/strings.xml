@@ -10,9 +10,7 @@
     <string name="title_activity_dialogo">DialogoActivity</string>
 
 
-
-    <string-array
-        name="string_array_opciones_dialogo">
+    <string-array name="string_array_opciones_dialogo">
         <item>1</item>
         <item>2</item>
         <item>3</item>
