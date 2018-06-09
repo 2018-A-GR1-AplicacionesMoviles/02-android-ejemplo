@@ -35,8 +35,8 @@ class HttpFuel : AppCompatActivity() {
                                 Log.i("http-ejemplo", "Id: ${entrenador.id}")
                                 Log.i("http-ejemplo", "Medallas: ${entrenador.medallas}")
                                 Log.i("http-ejemplo", "Edad: ${entrenador.edad}")
-                                Log.i("http-ejemplo", "Creado: ${entrenador.createdAt}")
-                                Log.i("http-ejemplo", "Actualizado: ${entrenador.updatedAt}")
+                                Log.i("http-ejemplo", "Creado: ${entrenador.createdAtDate}")
+                                Log.i("http-ejemplo", "Actualizado: ${entrenador.updatedAtDate}")
                             } else {
                                 Log.i("http-ejemplo", "Entrenador nulo")
                             }
@@ -48,30 +48,15 @@ class HttpFuel : AppCompatActivity() {
     }
 }
 
-class Entrenador {
-    var nombre: String
-    var apellido: String
-    var edad: String
-    var medallas: String
-    var createdAt: Date
-    var updatedAt: Date
-    var id: Int
+class Entrenador(var nombre: String,
+                 var apellido: String,
+                 var edad: String,
+                 var medallas: String,
+                 var createdAt: Long,
+                 var updatedAt: Long,
+                 var id: Int) {
+    var createdAtDate = Date(updatedAt)
+    var updatedAtDate = Date(createdAt)
 
-    constructor(mNombre: String,
-                mApellido: String,
-                mEdad: String,
-                mMedallas: String,
-                mCreatedAt: Long,
-                mUpdatedAt: Long,
-                mId: Int) {
-        nombre = mNombre
-        apellido = mApellido
-        edad = mEdad
-        medallas = mMedallas
-        createdAt = Date(mCreatedAt)
-        updatedAt = Date(mUpdatedAt)
-        id = mId
-
-    }
 
 }
