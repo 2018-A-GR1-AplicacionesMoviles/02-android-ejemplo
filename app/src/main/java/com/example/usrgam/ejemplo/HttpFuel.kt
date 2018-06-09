@@ -14,11 +14,6 @@ class HttpFuel : AppCompatActivity() {
 
         "http://172.29.64.52:1337/Entrenador/3"
                 .httpGet().responseString { request, response, result ->
-
-                    Log.i("http-ejemplo", "REQUEST $request")
-
-                    Log.i("http-ejemplo", "RESPONSE $response")
-                    Log.i("http-ejemplo", "RESULT $result")
                     when (result) {
                         is Result.Failure -> {
                             val ex = result.getException()
@@ -26,10 +21,6 @@ class HttpFuel : AppCompatActivity() {
                         }
                         is Result.Success -> {
                             val data = result.get()
-
-                            val result = Klaxon()
-                                    .parseArray<Post>(data)
-
                             Log.i("http-ejemplo", "Exito ${data}")
                         }
                     }
