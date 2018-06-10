@@ -14,7 +14,7 @@ class HttpFuel : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_http_fuel)
 
-        "http://172.29.64.52:1337/Entrenador/3"
+        "http://192.168.0.114:1337/Entrenador/1"
                 .httpGet()
                 .responseString { request, response, result ->
                     when (result) {
@@ -59,12 +59,12 @@ class HttpFuel : AppCompatActivity() {
 
 class Entrenador(var nombre: String,
                  var apellido: String,
-                 var edad: String,
-                 var medallas: String,
+                 var edad: Int,
+                 var medallas: Int,
                  var createdAt: Long,
                  var updatedAt: Long,
                  var id: Int,
-                 var pokemons: ArrayList<Pokemon> = ArrayList()) {
+                 var pokemons: List<Pokemon>) {
     var createdAtDate = Date(updatedAt)
     var updatedAtDate = Date(createdAt)
 
