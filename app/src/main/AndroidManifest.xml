@@ -10,6 +10,7 @@
     <uses-feature
         android:name="android.hardware.sensor.compass"
         android:required="true" />
+    <uses-feature android:name="android.hardware.camera" />
 
     <application
         android:allowBackup="true"
@@ -54,7 +55,8 @@
             android:name=".DialogoActivity"
             android:label="@string/title_activity_dialogo"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".HttpFuel"></activity>
+        <activity android:name=".HttpFuel" />
+        <activity android:name=".CamaraActivity"></activity>
     </application>
 
 </manifest>

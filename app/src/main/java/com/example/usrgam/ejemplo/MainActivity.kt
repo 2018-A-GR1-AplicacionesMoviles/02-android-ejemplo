@@ -96,6 +96,11 @@ class MainActivity : AppCompatActivity() {
         boton_http.setOnClickListener { view: View ->
             irAActividadHTTP()
         }
+        boton_camara.setOnClickListener { view: View ->
+            irAActividadCamara()
+        }
+
+
 
     }
 
@@ -135,6 +140,11 @@ class MainActivity : AppCompatActivity() {
 
     fun irAActividadHTTP() {
         val intent = Intent(this, HttpFuel::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadCamara() {
+        val intent = Intent(this, CamaraActivity::class.java)
         startActivity(intent)
     }
 
