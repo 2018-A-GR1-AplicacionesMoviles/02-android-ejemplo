@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.FileProvider
+import kotlinx.android.synthetic.main.activity_camara.*
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -16,6 +17,10 @@ class CamaraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camara)
+
+        boton_tomar_foto.setOnClickListener { view ->
+            tomarFoto()
+        }
     }
 
     private fun tomarFoto() {
@@ -50,7 +55,7 @@ class CamaraActivity : AppCompatActivity() {
         val photoURI: Uri = FileProvider
                 .getUriForFile(
                         this,
-                        "com.example.adrianeguez.mlkit.fileprovider",
+                        "com.example.usrgam.ejemplo.fileprovider",
                         archivo)
 
         takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
@@ -67,3 +72,13 @@ class CamaraActivity : AppCompatActivity() {
 
 
 }
+
+
+class GenericFileProvider : FileProvider() {
+
+}
+
+
+
+
+

@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context="com.example.usrgam.ejemplo.CamaraActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="116dp"
+        android:layout_height="105dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icono" />
+
+    <Button
+        android:id="@+id/boton_tomar_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="128dp"
+        android:text="Tomar foto"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </android.support.constraint.ConstraintLayout>
