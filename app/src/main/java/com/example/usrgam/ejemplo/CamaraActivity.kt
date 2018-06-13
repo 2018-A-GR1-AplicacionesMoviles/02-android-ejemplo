@@ -1,6 +1,8 @@
 package com.example.usrgam.ejemplo
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
@@ -8,6 +10,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.FileProvider
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_camara.*
 import java.io.File
 import java.text.SimpleDateFormat
@@ -42,7 +45,7 @@ class CamaraActivity : AppCompatActivity() {
                 "JPEG_",
                 Environment.DIRECTORY_PICTURES,
                 ".jpg")
-        directorioActualImagen = archivoImagen.absolutePath
+
         enviarIntentFoto(archivoImagen)
     }
 
@@ -65,7 +68,6 @@ class CamaraActivity : AppCompatActivity() {
     private fun enviarIntentFoto(archivo: File) {
         val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
-
         val photoURI: Uri = FileProvider
                 .getUriForFile(
                         this,
@@ -78,6 +80,20 @@ class CamaraActivity : AppCompatActivity() {
             startActivityForResult(takePictureIntent, TOMAR_FOTO_REQUEST);
         }
 
+    }
+
+    override fun onActivityResult(requestCode: Int,
+                                  resultCode: Int,
+                                  data: Intent) {
+        when (requestCode) {
+            TOMAR_FOTO_REQUEST -> {
+                if (resultCode == Activity.RESULT_OK) {
+                    val fotoActualBitmap = BitmapFactory
+                            .decodeFile(directorioActualImagen)
+                    image_view_foto.setImageBitmap(fotoActualBitmap)
+                }
+            }
+        }
     }
 
     companion object {

@@ -5,5 +5,8 @@
         path="Android/data/com.example.usrgam.ejemplo/files/Pictures" />
     <external-path
         name="my_videos"
-        path="Android/data/com.example.usrgam.ejemplo/files/Videos" />
+        path="/data/com.example.usrgam.ejemplo/app_profile/" />
+
+
+
 </paths>
