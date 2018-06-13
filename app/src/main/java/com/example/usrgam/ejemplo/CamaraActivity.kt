@@ -1,6 +1,7 @@
 package com.example.usrgam.ejemplo
 
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -17,6 +18,19 @@ class CamaraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camara)
+
+
+        val fotoActual = File(
+                Environment.getExternalStorageDirectory().path + // ->
+                        "/Android/data/com.example.usrgam.ejemplo/files/Pictures/JPEG_20180613_144431_1735249381.jpg")
+
+        val fotoActualBitmap = BitmapFactory
+                .decodeFile(fotoActual.getAbsolutePath())
+
+        image_view_camara.setImageBitmap(fotoActualBitmap)
+
+
+
 
         boton_tomar_foto.setOnClickListener { view ->
             tomarFoto()
