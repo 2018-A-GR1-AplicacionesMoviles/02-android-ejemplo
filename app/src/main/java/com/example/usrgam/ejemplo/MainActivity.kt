@@ -16,6 +16,8 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import android.widget.Toast
+import com.onesignal.OneSignal
+import com.tapadoo.alerter.Alerter
 import java.util.*
 
 
@@ -25,6 +27,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
+
+
+        Alerter.create(this@MainActivity)
+                .setTitle("Hola")
+                .setText("Amigos como estan...")
+                .show()
 
         val permisosDeCamara = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA
         )
@@ -99,7 +113,6 @@ class MainActivity : AppCompatActivity() {
         boton_camara.setOnClickListener { view: View ->
             irAActividadCamara()
         }
-
 
 
     }
