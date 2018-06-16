@@ -114,6 +114,10 @@ class MainActivity : AppCompatActivity() {
             irAActividadCamara()
         }
 
+        boton_google_maps.setOnClickListener { view: View ->
+            irAActividadGoogleMaps()
+        }
+
 
     }
 
@@ -149,6 +153,14 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CrearUsuarioActivity::class.java)
         startActivity(intent)
     }
+
+    fun irAActividadGoogleMaps() {
+        val intent = Intent(this, GoogleMapsActivity::class.java)
+        startActivity(intent)
+    }
+
+
+
 
 
     fun irAActividadHTTP() {

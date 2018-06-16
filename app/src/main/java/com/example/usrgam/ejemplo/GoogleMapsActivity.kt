@@ -27,6 +27,7 @@ class GoogleMapsActivity :
     var arregloMarcadores = ArrayList<Marker>()
 
     val epnLatLang = LatLng(-0.2103764, -78.4891095)
+
     val zoom = 17f
 
     val casaCulturaLatLang = LatLng(-0.209990, -78.495118)
