@@ -6,11 +6,8 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.util.Log
+import com.google.android.gms.maps.*
 
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import kotlinx.android.synthetic.main.activity_google_maps.*
 import java.util.*
@@ -38,7 +35,7 @@ class GoogleMapsActivity :
             .target(casaCulturaLatLang)
             .zoom(zoom)
             .build()
-    
+
     val supermaxiLatLang = LatLng(-0.206450, -78.487270)
     val supermaxi: CameraPosition = CameraPosition
             .Builder()
@@ -136,16 +133,12 @@ class GoogleMapsActivity :
 
 
             button_quito_julio_andrade.setOnClickListener { v ->
-                anadirMarcador(quito_julio_andrade, "Marcador en Quito Julio Andrade")
-
-
+                anadirMarcador(casaCulturaLatLang, "Marcador en Quito Julio Andrade")
                 moverCamaraPorPosicion(quito_julio_andrade_camera)
             }
 
             button_quito.setOnClickListener { v ->
-                anadirMarcador(quito, "Marcador en Quito Julio Andrade")
-
-
+                anadirMarcador(supermaxiLatLang, "Marcador en Quito Julio Andrade")
                 moverCamaraPorPosicion(quito_camera)
             }
         }
@@ -197,6 +190,14 @@ class GoogleMapsActivity :
         )
 
 
+    }
+
+
+    private fun moverCamaraPorPosicion(posicionCamara: CameraPosition) {
+        mMap.moveCamera(
+                CameraUpdateFactory
+                        .newCameraPosition(posicionCamara)
+        )
     }
 
 
