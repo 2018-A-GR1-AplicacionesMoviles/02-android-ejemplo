@@ -134,12 +134,12 @@ class GoogleMapsActivity :
 
             button_quito_julio_andrade.setOnClickListener { v ->
                 anadirMarcador(casaCulturaLatLang, "Marcador en Quito Julio Andrade")
-                moverCamaraPorPosicion(quito_julio_andrade_camera)
+                moverCamaraPorPosicion(casaCultura)
             }
 
             button_quito.setOnClickListener { v ->
                 anadirMarcador(supermaxiLatLang, "Marcador en Quito Julio Andrade")
-                moverCamaraPorPosicion(quito_camera)
+                moverCamaraPorPosicion(supermaxi)
             }
         }
     }
