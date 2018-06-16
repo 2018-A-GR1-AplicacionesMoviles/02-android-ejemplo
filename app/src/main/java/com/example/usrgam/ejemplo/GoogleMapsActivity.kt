@@ -178,7 +178,7 @@ class GoogleMapsActivity :
 
         arregloMarcadores.add(marker)
 
-        Log.i("map-adrian", "$arregloMarcadores")
+        Log.i("google-map", "$arregloMarcadores")
     }
 
 
@@ -252,27 +252,23 @@ class GoogleMapsActivity :
 
 
     override fun onCameraMoveStarted(p0: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onCameraMove() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onCameraMoveCanceled() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onCameraIdle() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onPolylineClick(p0: Polyline?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Log.i("google-map", " Dio click en la ruta $p0")
     }
 
     override fun onPolygonClick(p0: Polygon?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Log.i("google-map", " Dio click en el poligono $p0")
     }
 
 
