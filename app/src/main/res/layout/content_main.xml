@@ -173,4 +173,16 @@
         app:layout_constraintStart_toStartOf="@+id/boton_http"
         app:layout_constraintTop_toBottomOf="@+id/boton_http" />
 
+    <Button
+        android:id="@+id/boton_anko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="28dp"
+        android:text="Anko"
+        app:layout_constraintEnd_toEndOf="@+id/boton_camara"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/boton_camara"
+        app:layout_constraintTop_toBottomOf="@+id/boton_camara" />
+
 </android.support.constraint.ConstraintLayout>

@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.content_main.*
 import android.widget.Toast
 import com.onesignal.OneSignal
 import com.tapadoo.alerter.Alerter
+import org.jetbrains.anko.intentFor
 import java.util.*
 
 
@@ -118,6 +119,10 @@ class MainActivity : AppCompatActivity() {
             irAActividadGoogleMaps()
         }
 
+        boton_anko.setOnClickListener { view: View ->
+            irAActividadAnko()
+        }
+
 
     }
 
@@ -159,6 +164,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun irAActividadAnko() {
+        startActivity(intentFor<AnkoActivity>())
+    }
 
 
 
